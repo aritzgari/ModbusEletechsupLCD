@@ -14,14 +14,10 @@ instrument = minimalmodbus.Instrument(ser, slave_address, mode='rtu', close_port
 
 # Read holding registers
 register_address = 253 # Es el registro especifico de lectura escritura de la dirección.
-direccion_nueva = 1  # Change this to the number of registers you want to read
+direccion_nueva = 6  # Change this to the number of registers you want to read
 
 try:
-    # Read the registers
-    value = instrument.read_register(register_address, direccion_nueva)
-
-    # Print the result
-    print(f"Value read from register {register_address}: {value}")
+    instrument.write_register(register_address, direccion_nueva)
 
 except Exception as e:
     print(f"Error reading Modbus register: {e}")

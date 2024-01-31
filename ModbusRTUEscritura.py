@@ -7,12 +7,12 @@ baudratevar = 9600
 ser = serial.Serial(port, baudrate=baudratevar, bytesize=8, parity='N', stopbits=1, timeout=1)
 
 # Configure the Modbus RTU instrument
-slave_address = 1  # Change this to the slave address of your Modbus device // de 1 a 247
+slave_address = 6  # Change this to the slave address of your Modbus device // de 1 a 247
 instrument = minimalmodbus.Instrument(ser, slave_address, mode='rtu', close_port_after_each_call=True)
 
 # Write to a holding register
 register_address = 7 # Change this to the register address you want to write to // el 7 es para enviarle un número
-value_to_write = 11 # Change this to the value you want to write
+value_to_write = 6 # Change this to the value you want to write
 
 try:
     # Write to the register
