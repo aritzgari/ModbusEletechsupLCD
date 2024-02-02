@@ -7,7 +7,7 @@ baudratevar = 9600
 ser = serial.Serial(port, baudrate=baudratevar, bytesize=8, parity='N', stopbits=1, timeout=1)
 
 # Configure the Modbus RTU instrument
-slave_address = 1  # Change this to the slave address of your Modbus device // valor de 1 a 247
+slave_address = 5  # Change this to the slave address of your Modbus device // valor de 1 a 247
 instrument = minimalmodbus.Instrument(ser, slave_address, mode='rtu', close_port_after_each_call=True)
 
 # Read holding registers

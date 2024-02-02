@@ -1,6 +1,5 @@
 import minimalmodbus
 import serial
-import tkinter as tk
 # Configure the serial port
 port = 'COM7'  # Change this to the appropriate COM port on your system
 baudratevar = 9600
@@ -14,24 +13,23 @@ for esclavo in listaesclavos:
 
     # Read holding registers
     register_address = 7 # Change this to the register address you want to read
-    number_of_registers = 0  # Change this to the number of registers you want to read
+    number_of_registers = 0  # Este número no cambiarlo el 0 es para que coja números 
 
     try:
         # Read the registers
         value = instrument.read_register(register_address, number_of_registers)
-
+        
         # Print the result
-        if value != 0:
-            print(f"Leido del esclavo {esclavo} : {value}")
-        else:
+        if value == 0:
             print(f"El esclavo {esclavo} está resetado.")
-
+        else:
+            print(f"Leido del esclavo {esclavo} : {int(value)}")
+            
     except Exception as e:
         print(f"Error reading Modbus register: {e}")
-
-    finally:
-        # Close the serial port
         ser.close()
+
+
         
         
         

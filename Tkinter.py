@@ -17,7 +17,7 @@ def button_click():
     instrument = minimalmodbus.Instrument(ser, slave_address, mode='rtu', close_port_after_each_call=True)
     try:
         # Write to the register
-        instrument.write_register(register_address, value_to_write, functioncode=6)
+        instrument.write_register(register_address, value_to_write)
         
         # Print the result
         print(f"Value {value_to_write} written to register {register_address}")
@@ -30,7 +30,7 @@ def button_click():
         ser.close()
         
 #Label del esclavo
-slave_label = tk.Label(window, text="Slave Adress (1 o 2):")
+slave_label = tk.Label(window, text="Slave Adress:")
 slave_label.grid(row=0, column=0, padx=10, pady=5)
 #Entrada del esclavo
 slave_entry = tk.Entry(window)
