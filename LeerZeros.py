@@ -4,6 +4,7 @@ import serial
 port = 'COM7'  # Change this to the appropriate COM port on your system
 baudratevar = 9600
 
+#Lista con el range de los esclavos que tengamos
 x=6
 listaesclavos = [i for i in range(1, x+1)]
 
