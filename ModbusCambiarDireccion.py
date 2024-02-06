@@ -14,7 +14,7 @@ instrument = minimalmodbus.Instrument(ser, slave_address, mode='rtu', close_port
 
 # Read holding registers
 register_address = 253 # Es el registro especifico de lectura escritura de la dirección.
-direccion_nueva = 6  # Change this to the number of registers you want to read
+direccion_nueva = 6  # Cambiar a la nueva dirección
 
 try:
     instrument.write_register(register_address, direccion_nueva)
