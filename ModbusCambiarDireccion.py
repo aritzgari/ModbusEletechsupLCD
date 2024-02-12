@@ -1,5 +1,5 @@
-#Este script es para cambiar la dirección de un esclavo, por defecto es 1 y puede repetirse por loq ue a errores.
-#Para conectar en daisy chain no hay muchos problemas pero igual es necesario poner un resistencia para distancias largas de cable.
+# Este script es para cambiar la dirección de un esclavo, por defecto es 1 y puede repetirse por loq ue a errores.
+# Para conectar en daisy chain no hay muchos problemas pero igual es necesario poner un resistencia para distancias largas de cable.
 import minimalmodbus
 import serial
 
