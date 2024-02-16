@@ -13,7 +13,7 @@ def write_one_register():
 
     # Write to a holding register
     register_address = 1 # Change this to the register address you want to write to // el 7 es para enviarle un número
-    value_to_write = 70 # Change this to the value you want to write
+    value_to_write = 48 # Change this to the value you want to write
 
     try:
         # Write to the register
