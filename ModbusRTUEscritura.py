@@ -46,4 +46,4 @@ def escrituraenesclavos(direccion, valor):
         # Close the serial port
         ser.close()
             
-escrituraenesclavos(3,3)
+escrituraenesclavos(6,0)
