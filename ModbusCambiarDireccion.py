@@ -1,4 +1,4 @@
-# Este script es para cambiar la dirección de un esclavo, por defecto es 1 y puede repetirse por loq ue a errores.
+# Este script es para cambiar la dirección de un esclavo, por defecto es 1 y puede repetirse por lo que da errores.
 # Para conectar en daisy chain no hay muchos problemas pero igual es necesario poner un resistencia para distancias largas de cable.
 import minimalmodbus
 import serial
@@ -14,7 +14,7 @@ instrument = minimalmodbus.Instrument(ser, slave_address, mode='rtu', close_port
 
 # Read holding registers
 register_address = 253 # Es el registro especifico de lectura escritura de la dirección.
-direccion_nueva = 6  # Cambiar a la nueva dirección
+direccion_nueva = 7  # Cambiar a la nueva dirección
 
 try:
     instrument.write_register(register_address, direccion_nueva)

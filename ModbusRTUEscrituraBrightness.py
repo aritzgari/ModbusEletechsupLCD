@@ -4,7 +4,7 @@ import serial
 # Configure the serial port
 port = 'COM7'  # Change this to the appropriate COM port on your system
 baudratevar = 9600 #Valor por defecto
-registroesclavo=6 #Direccion del esclavo en el que escribir
+registroesclavo=1 #Direccion del esclavo en el que escribir
        
 # Configure the Modbus RTU instrument
 ser = serial.Serial(port, baudrate=baudratevar, bytesize=8, parity='N', stopbits=1, timeout=1)

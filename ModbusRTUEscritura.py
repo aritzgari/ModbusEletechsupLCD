@@ -37,7 +37,7 @@ def escrituraenesclavos(direccion, valor):
         instrument.write_register(register_address, valor)
             
         # Print the result
-        print(f"Value {valor} written to register {register_address}")
+        print(f"Value {valor} written to {direccion}")
 
     except Exception as e:
         print(f"Error writing to Modbus register: {e}")
@@ -46,4 +46,4 @@ def escrituraenesclavos(direccion, valor):
         # Close the serial port
         ser.close()
             
-escrituraenesclavos(6,0)
+escrituraenesclavos(4,7)
